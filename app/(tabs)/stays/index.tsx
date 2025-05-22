@@ -5,7 +5,7 @@ import Line from "@/component/Line";
 import StaysList from "@/component/StaysList";
 import stays from "@/data/stays";
 
-const StayIndex = () => {
+export default function StaysIndex() {
   const [search, setSearch] = useState("");
   const displayStays = stays.filter((stay) =>
     stay.name.toLowerCase().includes(search.toLowerCase())
@@ -29,9 +29,7 @@ const StayIndex = () => {
       <StaysList stays={displayStays} />
     </View>
   );
-};
-
-export default StayIndex;
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -43,22 +41,5 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     marginTop: 10,
-  },
-
-  line: {
-    borderWidth: 1,
-    borderColor: "white",
-    borderRadius: 10,
-    alignItems: "center",
-    backgroundColor: "white",
-    width: "90%",
-    height: 10,
-    marginTop: 20,
-  },
-  textContainer: {
-    padding: 20,
-    borderRadius: 10,
-    alignItems: "center",
-    backgroundColor: "white",
   },
 });

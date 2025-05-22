@@ -6,7 +6,7 @@ import trips from "@/data/trips";
 import { useState } from "react";
 import { Text, View, StyleSheet } from "react-native";
 
-export default function Index() {
+export default function TripsIndex() {
   const [search, setSearch] = useState("");
   const displayTrips = trips.filter((trip) =>
     trip.name.toLowerCase().includes(search.toLowerCase())
